@@ -21,13 +21,17 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 
     public async Task<IReadOnlyList<T>> GetAsync()
     {
-        return await _context.Set<T>().AsNoTracking().ToListAsync();
+        return await _context
+            .Set<T>()
+            .AsNoTracking()
+            .ToListAsync();
     }
 
     public async Task<T> GetByIdAsync(int id)
     {
-        return await _context.Set<T>()
-            .AsNoTracking() // ADD TO NOTION Comment about the AsNoTracking
+        return await _context
+            .Set<T>()
+            .AsNoTracking() // ADD TO NOTION Comment about the AsNoTracking (You can get more performance by disabling the AsNoTracking)
             .FirstOrDefaultAsync(q => q.Id == id);
     }
 
