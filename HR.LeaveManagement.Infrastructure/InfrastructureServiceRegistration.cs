@@ -10,7 +10,7 @@ namespace HR.LeaveManagement.Infrastructure;
 
 public static class InfrastructureServiceRegistration
 {
-    public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<EmailSettings>(configuration.GetSection("EmailSettings")); //ADD TO NOTION é necessário adicionar a extensão: Microsoft.Extensions.Options.ConfigurationExtensions
         services.AddTransient<IEmailSender, EmailSender>();

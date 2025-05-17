@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace HR.LeaveManagement.Persistence.DatabaseContext
 {
-    public class HrDatabaseContext : DbContext // you can have multiple contexts thats why its reccomended to put the context inside a folder
+    public class HrDatabaseContext : DbContext //ADD TO NOTION you can have multiple contexts thats why its reccomended to put the context inside a folder
     {
         public HrDatabaseContext(DbContextOptions<HrDatabaseContext> options) : base(options)
         {

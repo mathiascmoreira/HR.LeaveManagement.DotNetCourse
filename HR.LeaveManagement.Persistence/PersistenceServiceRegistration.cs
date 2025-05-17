@@ -21,6 +21,5 @@ public static class PersistenceServiceRegistration
         services.AddScoped<ILeaveRequestRepository, LeaveRequestRepository>();
 
         return services;
-    }
-        
+    }        
 }
